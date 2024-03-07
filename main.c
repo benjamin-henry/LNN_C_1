@@ -57,6 +57,7 @@ float samples[N_SAMPLES][LNN_SENSORY_SIZE] = {
 
 int main() {
     LNN lnn = init_lnn(LNN_SENSORY_SIZE, LNN_RESERVOIR_SIZE, LNN_OUTPUT_SIZE, LNN_ODE_UNFOLDS);   
+    
     for(unsigned int sample=0; sample < N_SAMPLES; sample++) {
         lnn_forward(
             lnn,
@@ -74,6 +75,5 @@ int main() {
         }
         printf("\n");
     }
-
     exit(EXIT_SUCCESS);
 }
